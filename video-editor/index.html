@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Video Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Simple Video Editor</h1>
 
+    <input type="file" id="videoInput" accept="video/*" />
+    <video id="videoPlayer" controls></video>
+
+    <div class="controls">
+      <label>Start Time (sec): <input type="number" id="startTime" value="0" /></label>
+      <label>End Time (sec): <input type="number" id="endTime" /></label>
+      <button id="trimButton">✂️ Trim</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.5/dist/ffmpeg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
